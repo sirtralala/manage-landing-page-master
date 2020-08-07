@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    margin-bottom: 4rem;
+
+    &__logo {
+        width: 10rem;
+        margin-top: .8rem;
+        cursor: pointer;
+    }
+
+    &__menu{
+        list-style-type: none;
+        color: $very-dark-blue;
+
+        &--item {
+            display: inline;
+            margin: 0 .5rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $dark-grayish-blue;
+            }
+        }
+    }
+
+    &__btn {
+        @include btn-red;
+    }
+}

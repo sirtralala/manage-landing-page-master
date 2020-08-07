@@ -1,0 +1,45 @@
+// COLORS PRIMARY
+
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+
+
+// COLORS NEUTRAL
+
+$dark-grayish-blue: hsl(227, 12%, 61%);
+$very-dark-blue: hsl(233, 12%, 13%);
+$very-pale-red: hsl(13, 100%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+
+// TYPOGRAPHY
+
+$font-size-default: 100;
+$font-color-default: $dark-grayish-blue;
+
+
+// MIXIN
+
+@mixin btn-red {
+    color: $very-light-gray;
+    background-color: $bright-red;
+    padding: .8rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 .5rem 1rem hsl(12, 69%, 81%);
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        background-color: hsl(12, 80%, 72%);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: scale(0.98);
+        box-shadow: 0 .3rem .8rem rgb(235, 175, 160);
+    }
+}

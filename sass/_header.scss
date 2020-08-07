@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    align-items: center;
+
+    &__content {
+        flex-basis: 50%;
+
+        &--h1 {
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+            color: $very-dark-blue;
+        }
+
+        &--text {
+            margin: 3rem 0;
+            padding-right: 32%;
+        }
+
+        &--btn {
+            @include btn-red;
+        }
+    }
+
+    &__img {
+        transform: translateX(2rem);
+
+    }
+}

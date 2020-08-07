@@ -1,0 +1,158 @@
+*,
+*::after,
+*::before {
+  /*  basic reset of margin and padding */
+  margin: 0;
+  padding: 0;
+  /*  make box-sizing inherit the given value in the body */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/*  1) set root font-size to 10px because 1rem is exactly 1 times the root font-size --> easier to calculate 
+    2) BUT even better is to set the root font-size to 100% and make it depending on the user's browser default setting
+    3) finally since we don't want 16px (default setting) but instead 10px we set it to 62.5% (10 / 16) */
+html {
+  font-family: 'Be Vietnam', sans-serif;
+  font-size: 100;
+  font-weight: 400;
+  color: #9095a7;
+  margin: 3rem 15vw;
+  background-image: url("/images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: 37vw -36vh;
+  overflow-x: hidden;
+}
+
+body {
+  /*  border-box will be inherited to all elements whithin in the body
+        --> see "box-sizing: inherit" in *{} */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* border-box means, that height and width will be defined for the entire box 
+       (including the padding and the border) and not just the content area.
+	    This also means that paddings and borders will reduce the inner width of the content area
+        instead of adding them to the total width of the element */
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3rem;
+  margin-bottom: 4rem;
+}
+
+.navbar__logo {
+  width: 10rem;
+  margin-top: .8rem;
+  cursor: pointer;
+}
+
+.navbar__menu {
+  list-style-type: none;
+  color: #1d1e25;
+}
+
+.navbar__menu--item {
+  display: inline;
+  margin: 0 .5rem;
+  cursor: pointer;
+}
+
+.navbar__menu--item:hover {
+  color: #9095a7;
+}
+
+.navbar__btn {
+  color: #fafafa;
+  background-color: #f25f3a;
+  padding: .8rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 0.5rem 1rem #f0baad;
+          box-shadow: 0 0.5rem 1rem #f0baad;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.navbar__btn:hover {
+  background-color: #f1957e;
+}
+
+.navbar__btn:focus {
+  outline: none;
+}
+
+.navbar__btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-box-shadow: 0 0.3rem 0.8rem #ebafa0;
+          box-shadow: 0 0.3rem 0.8rem #ebafa0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__content {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.header__content--h1 {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  color: #1d1e25;
+}
+
+.header__content--text {
+  margin: 3rem 0;
+  padding-right: 32%;
+}
+
+.header__content--btn {
+  color: #fafafa;
+  background-color: #f25f3a;
+  padding: .8rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 0.5rem 1rem #f0baad;
+          box-shadow: 0 0.5rem 1rem #f0baad;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.header__content--btn:hover {
+  background-color: #f1957e;
+}
+
+.header__content--btn:focus {
+  outline: none;
+}
+
+.header__content--btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-box-shadow: 0 0.3rem 0.8rem #ebafa0;
+          box-shadow: 0 0.3rem 0.8rem #ebafa0;
+}
+
+.header__img {
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+}
+/*# sourceMappingURL=main.css.map */
