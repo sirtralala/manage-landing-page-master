@@ -1,0 +1,14 @@
+{
+  "name": "10-manage-landing-page-master",
+  "version": "1.0.0",
+  "description": "coding challenge 10",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "author": "Thomas Doerflinger",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
