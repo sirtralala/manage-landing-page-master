@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     height: 3rem;
-    margin-bottom: 4rem;
+    margin: 0 $margin-default 4rem $margin-default;
 
     &__logo {
         width: 10rem;
@@ -13,6 +13,7 @@
 
     &__menu{
         list-style-type: none;
+        font-size: .9rem;
         color: $very-dark-blue;
 
         &--item {

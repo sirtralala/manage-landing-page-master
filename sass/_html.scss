@@ -16,12 +16,11 @@ html {
     font-size: $font-size-default;
     font-weight: 400;
     color: $font-color-default;
-    margin: 3rem 15vw;
+    margin-top: 3rem;
 
-    background-image: url("/images/bg-tablet-pattern.svg");
-    background-repeat: no-repeat;
-    background-position: 37vw -36vh;
-    overflow-x: hidden;
+    background-image: url("/images/bg-tablet-pattern.svg"), url("/images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 52vw -36vh, -30vw 130vh;
 }
 
 body {

@@ -1,0 +1,51 @@
+.content {
+    display: flex;
+    margin: 4rem $margin-default 0 $margin-default;
+    
+    &__text {
+        flex-basis: 50%;
+
+        &--h2 {
+            @include h2 ($very-dark-blue);
+        }
+
+        &--paragraph {
+            margin: 2rem 0;
+            padding-right: 32%;
+        }
+    }
+
+    &__features {
+        flex-basis: 50%;
+
+        &--feature {
+            display: flex;
+
+            &-icon {
+                height: 2rem;
+                color: $very-light-gray;
+                background-color: $bright-red;
+                padding: .5rem 1.5rem;
+                margin-right: 1rem;
+                border: none;
+                border-radius: 2rem;
+
+                &-value {
+                    transform: translateY(-.3rem);
+                }
+            }
+
+            &-paragraph {
+                margin-bottom: 1.5rem;
+
+                &-h3 {
+                    color: $very-dark-blue;
+                }
+    
+                &-text {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

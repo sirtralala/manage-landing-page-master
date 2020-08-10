@@ -1,0 +1,144 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem $margin-default;
+
+    &__h2 {
+        @include h2 ($very-dark-blue);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    &__testimonial {
+        flex-basis: 70%;
+        text-align: center;
+        // transition: left 2s;
+        
+        &--background {
+            background-color: $very-light-gray;
+            padding: 2rem 6rem 5rem 6rem;
+        }
+
+        &--pic {
+            width: 12%;
+            transform: translateY(3rem);
+        }
+
+        &--h3 {
+            color: $very-dark-blue;
+            margin: 2rem 0 1rem 0;
+        }
+
+        &--paragraph {
+            font-weight: 500;
+        }
+    }
+
+    &__arrows {
+        height: 0;
+
+        &--prev,
+        &--next {
+            position: relative;
+            top: -9.5rem;
+            left: -450%;
+            width: auto;
+            padding: .5rem;
+            color: $bright-red;
+            font-weight: bold;
+            font-size: 2rem;
+            transition: 0.2s ease;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        &--prev {
+            border-radius: 1rem 0 0 1rem;
+        }
+        
+        &--next {
+            left: 450%;
+            border-radius: 0 1rem 1rem 0;
+        }
+        
+        &--prev:hover,
+        &--next:hover {
+            background-color: $very-pale-red;
+        }
+    }
+
+    &__dots {
+        
+        &--dot {
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            margin: 0 .3rem;
+            transform: translateY(-3.5rem);
+            background-color: $bright-red-hover;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+
+            &:hover,
+            &-active {
+                background-color: $bright-red;
+            }
+        }
+    }
+      
+    &__btn {
+        @include btn-red;
+    }
+}
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* .to-left {
+    animation-name: to-left;
+    animation-duration: 1s;
+}
+
+@keyframes to-left {
+    from {
+        transform: translateX(0);
+        display: block;
+    }
+    to {
+        transform: translateX(-2000px);
+        display: none;
+    }
+}
+
+.from-right {
+    animation-name: from-right;
+    animation-duration: 1s;
+}
+
+@keyframes from-right {
+    from {
+        transform: translateX(2000px);
+    }
+    to {
+        transform: translateX(0);
+    }
+} */
