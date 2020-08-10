@@ -1,17 +1,50 @@
 .content {
     display: flex;
     margin: 4rem $margin-default 0 $margin-default;
+
+    @media only screen and (max-width: 1000px) {
+        margin: 4rem $margin-default-1000px 0 $margin-default-1000px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        margin: 4rem $margin-default-800px 0 $margin-default-800px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+    }
     
     &__text {
         flex-basis: 50%;
 
+        @media only screen and (max-width: 600px) {
+            text-align: center;
+        }
+
         &--h2 {
             @include h2 ($very-dark-blue);
+
+            @media only screen and (max-width: 1000px) {
+                margin-right: 4vw;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 2.4rem;
+                line-height: 3.4rem;
+                margin-right: 0;
+                margin: 0 12vw;
+            }
         }
 
         &--paragraph {
             margin: 2rem 0;
             padding-right: 32%;
+
+            @media only screen and (max-width: 600px) {
+                padding-right: 0;
+                line-height: $line-height-mobile;
+                margin: 2rem 10vw 4rem 10vw;
+            }
         }
     }
 
@@ -29,9 +62,25 @@
                 margin-right: 1rem;
                 border: none;
                 border-radius: 2rem;
+                position: relative;
+
+                &::before {
+                    
+                    @media only screen and (max-width: 600px) {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 6rem;
+                        height: 2rem;
+                        background-color: $very-pale-red;
+                        border-radius: 2rem 0 0 2rem;
+                        z-index: -10;
+                    }
+                }
 
                 &-value {
-                    transform: translateY(-.3rem);
+                    transform: translateY(-.4rem);
                 }
             }
 
@@ -40,10 +89,22 @@
 
                 &-h3 {
                     color: $very-dark-blue;
+
+                    @media only screen and (max-width: 600px) {
+                        height: 2rem;
+                        width: 105%;
+                        background-color: $very-pale-red;
+                        white-space: nowrap;
+                    }
                 }
     
                 &-text {
                     margin-top: 1rem;
+
+                    @media only screen and (max-width: 600px) {
+                        margin: 1rem 0 2rem -5rem;
+                        line-height: $line-height-mobile;
+                    }
                 }
             }
         }

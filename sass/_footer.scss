@@ -1,11 +1,16 @@
 .simplify {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     overflow: hidden;
 
     background: $bright-red url("/images/bg-simplify-section-desktop.svg") no-repeat 8vw -8vw;
     padding: 4rem $margin-default;
+
+    @media only screen and (max-width: 600px) {
+        background: $bright-red url("/images/bg-simplify-section-mobile.svg") no-repeat;
+    }
 
     &::before {
         content: "";
@@ -15,15 +20,58 @@
         left: 46vw; 
         background: url("/images/bg-simplify-section-desktop.svg") no-repeat space 2vw -1vw;
         transform: rotate(180deg);
+
+        @media only screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        padding: 4rem $margin-default-1000px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        padding: 2rem $margin-default-1000px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        padding: 4rem $margin-default;
+        text-align: center;
     }
 
     &__h2 {
         flex-basis: 50%;
         @include h2 ($very-light-gray);
+
+        @media only screen and (max-width: 800px) {
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+
+        @media only screen and (max-width: 650px) {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
     }
 
     &__btn {
         @include btn-without-shadow ($bright-red, $very-light-gray, $very-pale-red, 30%);
+
+        @media only screen and (max-width: 800px) {
+            padding: .8rem .8rem;
+        }
+
+        @media only screen and (max-width: 800px) {
+            padding: .8rem 2rem;
+            margin-top: 2rem;
+            margin-left: 0;
+        }
     }
 }
 
@@ -31,33 +79,81 @@
     display: flex;
     background-color: $very-dark-blue;
     color: $very-light-gray;
-    padding: 2rem $margin-default;
+    padding: 3rem $margin-default;
+
+    @media only screen and (max-width: 1200px) {
+        padding: 3rem $margin-default-1000px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        padding: 3rem $margin-default-1000px 7rem $margin-default-1000px;
+    }
 
     &__logo-container {
-        flex-basis: 30%;
+        flex-basis: 15%;
+        width: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        &--logo {
-            min-width: 100%;
-            filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%);
+        @media only screen and (max-width: 800px) {
+            width: 15vw;
+            margin-right: 4vw;
         }
 
+        @media only screen and (max-width: 600px) {
+            order: 3;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        &--logo {
+            height: 24px;
+            /* filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%); */
+
+            @media only screen and (max-width: 600px) {
+                order: 2;
+                height: 34px;
+            }
+        }
+        
         &--sm-icons {
             display: flex;
             justify-content: space-between;
             flex-wrap: nowrap;
+            width: 100%;
+
+            @media only screen and (max-width: 600px) {
+                order: 1;
+                padding: 3rem 1rem;
+                width: 100%;
+            }
 
             &-icon {
-                width: 16%;
+                width: 15%;
+
+                @media only screen and (max-width: 600px) {
+                    width: 2.5rem;
+                }
             }
         }
 
         &--logo:hover,
         &--sm-icons-icon:hover {
-            filter: invert(54%) sepia(55%) saturate(4542%) hue-rotate(338deg) brightness(98%) contrast(93%);
+            filter: invert(49%) sepia(62%) saturate(2195%) hue-rotate(335deg) brightness(95%) contrast(101%);
             cursor: pointer;
+        }
+    }
+
+    &__menu-container {
+        flex-basis: 55%;
+        display: flex;
+        justify-content: space-around;
+
+        @media only screen and (max-width: 600px) {
+            order: 2;
+            margin-top: 3rem;
         }
     }
 
@@ -67,6 +163,19 @@
         list-style-type: none;
         margin-left: 8vw;
         line-height: 2rem;
+
+        @media only screen and (max-width: 800px) {
+            flex-basis: 20%;
+            font-size: .7rem;
+            line-height: 1.5rem;
+            margin-left: 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            flex-basis: 30%;
+            font-size: 1rem;
+            line-height: 2rem;
+        }
 
         &--item:hover {
             color: $bright-red;
@@ -80,6 +189,10 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @media only screen and (max-width: 600px) {
+            order: 1;
+        }
+
         &--container {
             display: flex;
             position: relative;
@@ -89,15 +202,30 @@
                 padding: .5rem 1.6rem;
                 border-style: none;
                 border-radius: 1.5rem;
+                border: 2px solid transparent;
 
                 &:focus {
                     outline: none;
-                } 
+                }
+
+                @media only screen and (max-width: 600px) {
+                    width: 80%;
+                }
+
+                &-invalid {
+                    border: 2px solid $bright-red;
+                }
             }
     
             &-btn {
                 @include btn-without-shadow ($very-light-gray, $bright-red, $bright-red-hover, 1vw);
-                padding: .8rem 1.5rem;
+                padding: .8rem auto .8rem 1.5rem;
+                text-transform: uppercase;
+
+                @media only screen and (max-width: 600px) {
+                    width: 20%;
+                    padding: .8rem .5rem;
+                }
             }
 
             &-invalidEmail,
@@ -120,6 +248,27 @@
             font-size: .8rem;
             color: $dark-grayish-blue;
             margin-left: auto;
+
+            @media only screen and (max-width: 800px) {
+                font-size: .7rem;
+            }
+
+            @media only screen and (max-width: 600px) {
+                display: none;
+            }
+
+            &-mobile {
+                display: none;
+
+                @media only screen and (max-width: 600px) {
+                    display: block;
+                    font-size: .8rem;
+                    color: $dark-grayish-blue;
+                    position: relative;
+                    top: 30rem;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }

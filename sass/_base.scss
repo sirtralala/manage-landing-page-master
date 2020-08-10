@@ -17,10 +17,14 @@ $very-light-gray: hsl(0, 0%, 98%);
 
 $font-size-default: 100;
 $font-color-default: $dark-grayish-blue;
+$line-height-mobile: 2.2rem;
 
 
 // MARGIN
+
 $margin-default: 15vw;
+$margin-default-1000px: 5vw;
+$margin-default-800px: 2vw;
 
 // MIXIN
 
@@ -75,7 +79,7 @@ $margin-default: 15vw;
 }
 
 @mixin h2 ($font-color) {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
     color: $font-color;
 }

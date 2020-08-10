@@ -60,11 +60,13 @@ function validateEmail() {
 
     if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input)) {
         document.querySelector('#invalidEmail').classList.remove("footer__search--container-active");
+        document.querySelector('#inputEmail').classList.remove("footer__search--container-input-invalid");
         document.querySelector('#validEmail').className += " footer__search--container-active";
     }
     else {
         document.querySelector('#validEmail').classList.remove("footer__search--container-active");
         document.querySelector('#invalidEmail').className += " footer__search--container-active";
+        document.querySelector('#inputEmail').className += " footer__search--container-input-invalid";
     }
 }
 

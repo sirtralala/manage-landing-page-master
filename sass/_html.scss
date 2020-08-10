@@ -21,6 +21,18 @@ html {
     background-image: url("/images/bg-tablet-pattern.svg"), url("/images/bg-tablet-pattern.svg");
     background-repeat: no-repeat, no-repeat;
     background-position: 52vw -36vh, -30vw 130vh;
+
+    @media only screen and (max-width: 1000px) {
+        background-position: 32vw -36vh, -50vw 110vh;
+    }
+
+    @media only screen and (max-width: 800px) {
+        background-position: 22vw -36vh, -70vw 100vh;
+    }
+
+    @media only screen and (max-width: 600px) {
+        margin-top: 1rem;
+    }
 }
 
 body {

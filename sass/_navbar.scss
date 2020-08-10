@@ -5,10 +5,26 @@
     height: 3rem;
     margin: 0 $margin-default 4rem $margin-default;
 
+    @media only screen and (max-width: 1000px) {
+        margin: 0 $margin-default-1000px 4rem $margin-default-1000px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        margin: 0 $margin-default-800px 4rem $margin-default-800px;
+    }
+
     &__logo {
         width: 10rem;
         margin-top: .8rem;
         cursor: pointer;
+
+        @media only screen and (max-width: 700px) {
+            width: 8rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            width: 10rem;
+        }
     }
 
     &__menu{
@@ -16,10 +32,18 @@
         font-size: .9rem;
         color: $very-dark-blue;
 
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+
         &--item {
             display: inline;
             margin: 0 .5rem;
             cursor: pointer;
+
+            @media only screen and (max-width: 710px) {
+                margin: 0 .2rem;
+            }
 
             &:hover {
                 color: $dark-grayish-blue;
@@ -29,5 +53,22 @@
 
     &__btn {
         @include btn-red;
+
+        @media only screen and (max-width: 700px) {
+            padding: .8rem .8rem;
+            min-width: fit-content;
+        }
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    &__hamburger {
+        display: none;
+
+        @media only screen and (max-width: 600px) {
+            display: block;
+        }
     }
 }
