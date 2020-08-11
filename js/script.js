@@ -71,3 +71,4 @@ function validateEmail() {
 }
 
 // ********************* END OF EMAIL VALIDATION ********************* //
+

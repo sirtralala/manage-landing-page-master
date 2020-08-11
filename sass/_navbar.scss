@@ -27,12 +27,58 @@
         }
     }
 
-    &__menu{
+    &__menu {
         list-style-type: none;
         font-size: .9rem;
         color: $very-dark-blue;
 
         @media only screen and (max-width: 600px) {
+            display: none;
+        }
+
+        &:target,
+        &:target ~ .navbar__close {
+            display: block;
+        }
+
+        &:target {
+            height: fit-content;
+            width: 90%;
+            position: fixed;
+            top: 5rem;
+            left: 5%;
+            margin: auto;
+            padding: 10%;
+            
+            background-color: hsl(0, 0%, 100%);
+            border-radius: .3rem;
+            border: none;
+        
+            font-size: 1.4rem;
+            color: $very-dark-blue;
+            line-height: 3.5rem;
+            font-weight: 700;
+            z-index: 9999;
+
+            animation: appear .1s ease-out;
+        }
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        &:target > li {
+            display: table;
+            margin: auto;
+        }
+        
+        &:target + a {
             display: none;
         }
 
@@ -70,5 +116,48 @@
         @media only screen and (max-width: 600px) {
             display: block;
         }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__close {
+        display: none;
+        margin-right: .15rem;
     }
 }
+
+/* #menu:target,
+#menu:target ~ .navbar__close {
+    display: block;
+} 
+
+#menu:target {
+    height: fit-content;
+    width: 90%;
+    position: fixed;
+    top: 5rem;
+    left: 5%;
+    margin: auto;
+    padding: 10%;
+    
+    background-color: hsl(0, 0%, 100%);
+    border-radius: .3rem;
+    border: none;
+
+    font-size: 1.4rem;
+    color: $very-dark-blue;
+    line-height: 3.5rem;
+    font-weight: 700;
+    z-index: 9999;
+}
+
+#menu:target > li {
+    display: table;
+    margin: auto;
+}
+
+#menu:target + a {
+    display: none;
+} */
