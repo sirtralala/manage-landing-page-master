@@ -9,7 +9,7 @@
 
 html {
   font-family: 'Be Vietnam', sans-serif;
-  font-size: 100;
+  font-size: 100%;
   font-weight: 400;
   color: #9095a7;
   padding-top: 3rem;
@@ -1111,6 +1111,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1163,7 +1166,7 @@ body {
   -webkit-transition: all .2s;
   transition: all .2s;
   z-index: 10;
-  padding: .8rem auto .8rem 1.5rem;
+  padding: .8rem 1.5rem .8rem 1.5rem;
   text-transform: uppercase;
 }
 
