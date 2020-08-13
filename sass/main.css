@@ -995,6 +995,10 @@ body {
   }
 }
 
+.footer__logo-container--h2 {
+  display: none;
+}
+
 .footer__logo-container--logo {
   height: 24px;
 }
