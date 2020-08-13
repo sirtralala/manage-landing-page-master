@@ -13,6 +13,14 @@
         margin: 0 $margin-default-800px 4rem $margin-default-800px;
     }
 
+    @media only screen and (max-width: 600px) {
+        margin: 0 6vw 4rem 6vw;
+    }
+
+    @media only screen and (max-width: 420px) {
+        justify-content: space-around;
+    }
+
     &__logo {
         width: 10rem;
         margin-top: .8rem;
@@ -58,17 +66,17 @@
             color: $very-dark-blue;
             line-height: 3.5rem;
             font-weight: 700;
-            z-index: 9999;
+            z-index: 99;
 
             animation: appear .1s ease-out;
         }
 
         @keyframes appear {
-            0% {
+            from {
                 opacity: 0;
             }
 
-            100% {
+            to {
                 opacity: 1;
             }
         }
@@ -125,39 +133,6 @@
     &__close {
         display: none;
         margin-right: .15rem;
+        z-index: 200;
     }
 }
-
-/* #menu:target,
-#menu:target ~ .navbar__close {
-    display: block;
-} 
-
-#menu:target {
-    height: fit-content;
-    width: 90%;
-    position: fixed;
-    top: 5rem;
-    left: 5%;
-    margin: auto;
-    padding: 10%;
-    
-    background-color: hsl(0, 0%, 100%);
-    border-radius: .3rem;
-    border: none;
-
-    font-size: 1.4rem;
-    color: $very-dark-blue;
-    line-height: 3.5rem;
-    font-weight: 700;
-    z-index: 9999;
-}
-
-#menu:target > li {
-    display: table;
-    margin: auto;
-}
-
-#menu:target + a {
-    display: none;
-} */

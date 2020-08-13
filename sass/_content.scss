@@ -23,6 +23,7 @@
 
         &--h2 {
             @include h2 ($very-dark-blue);
+            margin-right: 2vw;
 
             @media only screen and (max-width: 1000px) {
                 margin-right: 4vw;

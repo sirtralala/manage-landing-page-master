@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <!-- for production, change to href="css/style_comp.css" -->
-  <!-- <link rel="stylesheet" href="css/style_comp.css"> -->
   <link rel="stylesheet" href="sass/main.css">
+   <!-- for production, change to href="css/style_comp.css" -->
+  <!-- <link rel="stylesheet" href="css/style_comp.css"> -->
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Manage landing page</title>
@@ -33,7 +33,7 @@
       <li class="navbar__menu--item">Careers</li>
       <li class="navbar__menu--item">Community</li>
     </ul>
-    <a href="#menu" class="navbar__hamburger"><img src="./images/icon-hamburger.svg" alt="Icon hamburger"></a>
+    <a href="#menu" class="navbar__hamburger" id="open"><img src="./images/icon-hamburger.svg" alt="Icon hamburger"></a>
     <a href="#" class="navbar__close" id="close"><img src="./images/icon-close.svg" alt="Icon close"></a>
     <button class="navbar__btn">Get Started</button>
   </nav>
@@ -169,7 +169,6 @@
   
   <section class="footer">
     <div class="footer__logo-container">
-      <!-- <img src="./images/logo.svg" alt="Manage logo" class="footer__logo-container--logo"> -->
       <svg class="footer__logo-container--logo">
         <use xlink:href="#manage-logo" />
       </svg>
@@ -216,6 +215,5 @@
   </div>
 
   <script src="./js/script.js"></script>
-
 </body>
 </html>

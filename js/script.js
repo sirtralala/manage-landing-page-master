@@ -72,3 +72,45 @@ function validateEmail() {
 
 // ********************* END OF EMAIL VALIDATION ********************* //
 
+
+
+
+// ********************* MOBILE MENU BACKGROUND & SCROLLING  ********************* //
+
+toggleBodyScrolling = value => {
+    document.body.style.position = value;
+}
+
+addMobileGradientBackground = () => {
+    if (document.querySelector('#gradient')) {
+        document.querySelector('#gradient').style.visibility = 'visible';
+    }
+    else {
+        const gradientBackground = document.createElement('div');
+        gradientBackground.setAttribute("id", "gradient");
+    
+        const styles = {
+            position: 'absolute',
+            top: '0',
+            width: '100vw',
+            height: '110vh',
+            background: 'linear-gradient(to bottom, hsl(233, 12%, 13%, 0), hsl(233, 12%, 13%, 1))',
+            visibility: 'visible'
+        };
+    
+        Object.assign(gradientBackground.style, styles);
+        document.body.appendChild(gradientBackground);
+    }
+    toggleBodyScrolling('fixed');
+}
+
+removeMobileGradientBackground = () => {
+    const gradient = document.querySelector('#gradient');
+    gradient.style.visibility = 'hidden';
+    toggleBodyScrolling('relative');
+}
+
+document.querySelector('#open').addEventListener('click', addMobileGradientBackground);
+document.querySelector('#close').addEventListener('click', removeMobileGradientBackground);
+
+// ********************* END OF MOBILE MENU BACKGROUND & SCROLLING  ********************* //

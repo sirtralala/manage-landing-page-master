@@ -1,23 +1,18 @@
 *,
 *::after,
 *::before {
-  /*  basic reset of margin and padding */
   margin: 0;
   padding: 0;
-  /*  make box-sizing inherit the given value in the body */
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
-/*  1) set root font-size to 10px because 1rem is exactly 1 times the root font-size --> easier to calculate 
-    2) BUT even better is to set the root font-size to 100% and make it depending on the user's browser default setting
-    3) finally since we don't want 16px (default setting) but instead 10px we set it to 62.5% (10 / 16) */
 html {
   font-family: 'Be Vietnam', sans-serif;
   font-size: 100;
   font-weight: 400;
   color: #9095a7;
-  margin-top: 3rem;
+  padding-top: 3rem;
   background-image: url("/images/bg-tablet-pattern.svg"), url("/images/bg-tablet-pattern.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: 52vw -36vh, -30vw 130vh;
@@ -37,19 +32,13 @@ html {
 
 @media only screen and (max-width: 600px) {
   html {
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
 }
 
 body {
-  /*  border-box will be inherited to all elements whithin in the body
-        --> see "box-sizing: inherit" in *{} */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /* border-box means, that height and width will be defined for the entire box 
-       (including the padding and the border) and not just the content area.
-	    This also means that paddings and borders will reduce the inner width of the content area
-        instead of adding them to the total width of the element */
 }
 
 .navbar {
@@ -68,13 +57,26 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .navbar {
-    margin: 0 5vw 4rem 5vw;
+    margin: 0 4vw 4rem 4vw;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .navbar {
     margin: 0 2vw 4rem 2vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    margin: 0 6vw 4rem 6vw;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .navbar {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -130,25 +132,25 @@ body {
   color: #1d1e25;
   line-height: 3.5rem;
   font-weight: 700;
-  z-index: 9999;
+  z-index: 99;
   -webkit-animation: appear .1s ease-out;
           animation: appear .1s ease-out;
 }
 
 @-webkit-keyframes appear {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 
 @keyframes appear {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
@@ -238,41 +240,9 @@ body {
 .navbar__close {
   display: none;
   margin-right: .15rem;
+  z-index: 200;
 }
 
-/* #menu:target,
-#menu:target ~ .navbar__close {
-    display: block;
-} 
-
-#menu:target {
-    height: fit-content;
-    width: 90%;
-    position: fixed;
-    top: 5rem;
-    left: 5%;
-    margin: auto;
-    padding: 10%;
-    
-    background-color: hsl(0, 0%, 100%);
-    border-radius: .3rem;
-    border: none;
-
-    font-size: 1.4rem;
-    color: $very-dark-blue;
-    line-height: 3.5rem;
-    font-weight: 700;
-    z-index: 9999;
-}
-
-#menu:target > li {
-    display: table;
-    margin: auto;
-}
-
-#menu:target + a {
-    display: none;
-} */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,7 +255,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .header {
-    margin: 0 5vw 6rem 5vw;
+    margin: 0 4vw 6rem 4vw;
   }
 }
 
@@ -421,7 +391,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .content {
-    margin: 4rem 5vw 0 5vw;
+    margin: 4rem 4vw 0 4vw;
   }
 }
 
@@ -455,6 +425,7 @@ body {
   font-size: 2.4rem;
   line-height: 2.4rem;
   color: #1d1e25;
+  margin-right: 2vw;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -571,7 +542,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .testimonials {
-    margin: 4rem 5vw 8rem 5vw;
+    margin: 4rem 4vw 8rem 4vw;
   }
 }
 
@@ -844,7 +815,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  overflow: hidden;
   background: #f25f3a url("/images/bg-simplify-section-desktop.svg") no-repeat 8vw -8vw;
   padding: 4rem 15vw;
 }
@@ -874,13 +844,13 @@ body {
 
 @media only screen and (max-width: 1200px) {
   .simplify {
-    padding: 4rem 5vw;
+    padding: 4rem 4vw;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .simplify {
-    padding: 2rem 5vw;
+    padding: 2rem 4vw;
   }
 }
 
@@ -977,7 +947,7 @@ body {
 
 @media only screen and (max-width: 1200px) {
   .footer {
-    padding: 3rem 5vw;
+    padding: 3rem 4vw;
   }
 }
 
@@ -987,7 +957,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 3rem 5vw 7rem 5vw;
+    padding: 3rem 4vw 7rem 4vw;
   }
 }
 
@@ -1026,7 +996,6 @@ body {
 
 .footer__logo-container--logo {
   height: 24px;
-  /* filter: invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%); */
 }
 
 @media only screen and (max-width: 600px) {
