@@ -94,7 +94,7 @@ addMobileGradientBackground = () => {
             top: '0',
             width: '100vw',
             height: '110vh',
-            background: 'linear-gradient(to bottom, hsl(233, 12%, 13%, 0), hsl(233, 12%, 13%, 1))',
+            background: 'linear-gradient(to bottom, hsla(233, 12%, 13%, 0), hsla(233, 12%, 13%, 1))',
             visibility: 'visible'
         };
     
