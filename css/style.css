@@ -329,6 +329,9 @@ body {
       @media only screen and (max-width: 600px) {
         .testimonials__testimonial--background {
           padding: 2rem 2rem 3rem 2rem; } }
+      @media only screen and (max-width: 400px) {
+        .testimonials__testimonial--background {
+          padding: 2rem 1rem 3rem 1rem; } }
     .testimonials__testimonial--pic {
       width: 12%;
       transform: translateY(3rem); }
@@ -371,6 +374,12 @@ body {
       @media only screen and (max-width: 500px) {
         .testimonials__arrows--prev, .testimonials__arrows--next {
           left: -250%; } }
+      @media only screen and (max-width: 420px) {
+        .testimonials__arrows--prev, .testimonials__arrows--next {
+          left: -200%; } }
+      @media only screen and (max-width: 360px) {
+        .testimonials__arrows--prev, .testimonials__arrows--next {
+          left: -150%; } }
     .testimonials__arrows--prev {
       border-radius: 1rem 0 0 1rem; }
     .testimonials__arrows--next {
@@ -388,6 +397,12 @@ body {
       @media only screen and (max-width: 500px) {
         .testimonials__arrows--next {
           left: 250%; } }
+      @media only screen and (max-width: 420px) {
+        .testimonials__arrows--next {
+          left: 200%; } }
+      @media only screen and (max-width: 360px) {
+        .testimonials__arrows--next {
+          left: 150%; } }
     .testimonials__arrows--prev:hover, .testimonials__arrows--next:hover {
       background-color: #ffefeb; }
   .testimonials__dots--dot {
@@ -403,6 +418,12 @@ body {
     @media only screen and (max-width: 800px) {
       .testimonials__dots--dot {
         transform: translateY(-1.5rem); } }
+    @media only screen and (max-width: 450px) {
+      .testimonials__dots--dot {
+        transform: translateY(0); } }
+    @media only screen and (max-width: 300px) {
+      .testimonials__dots--dot {
+        transform: translateY(1.5rem); } }
     .testimonials__dots--dot:hover, .testimonials__dots--dot-active {
       background-color: #f25f3a; }
   .testimonials__btn {
@@ -424,7 +445,8 @@ body {
       box-shadow: 0 0.3rem 0.8rem #f1957e; }
     @media only screen and (max-width: 600px) {
       .testimonials__btn {
-        padding: 1rem 3rem; } }
+        padding: 1rem 3rem;
+        z-index: 300; } }
 
 .fade {
   animation-name: fade;

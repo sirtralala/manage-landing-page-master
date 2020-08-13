@@ -43,6 +43,10 @@
             @media only screen and (max-width: 600px) {
                 padding: 2rem 2rem 3rem 2rem;
             }
+
+            @media only screen and (max-width: 400px) {
+                padding: 2rem 1rem 3rem 1rem;
+            }
         }
 
         &--pic {
@@ -102,6 +106,14 @@
             @media only screen and (max-width: 500px) {
                 left: -250%;
             }
+
+            @media only screen and (max-width: 420px) {
+                left: -200%;
+            }
+
+            @media only screen and (max-width: 360px) {
+                left: -150%;
+            }
         }
 
         &--prev {
@@ -126,6 +138,14 @@
 
             @media only screen and (max-width: 500px) {
                 left: 250%;
+            }
+
+            @media only screen and (max-width: 420px) {
+                left: 200%;
+            }
+
+            @media only screen and (max-width: 360px) {
+                left: 150%;
             }
         }
         
@@ -152,6 +172,14 @@
                 transform: translateY(-1.5rem);
             }
 
+            @media only screen and (max-width: 450px) {
+                transform: translateY(0);
+            }
+
+            @media only screen and (max-width: 300px) {
+                transform: translateY(1.5rem);
+            }
+
             &:hover,
             &-active {
                 background-color: $bright-red;
@@ -165,6 +193,7 @@
 
         @media only screen and (max-width: 600px) {
             padding: 1rem 3rem;
+            z-index: 300;
         }
     }
 }
