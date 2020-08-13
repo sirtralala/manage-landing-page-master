@@ -503,6 +503,7 @@ body {
 
 .content__features--feature-paragraph-h3 {
   color: #1d1e25;
+  font-size: 100%;
 }
 
 @media only screen and (max-width: 600px) {
