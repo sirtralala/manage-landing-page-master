@@ -1,12 +1,17 @@
 *,
 *::after,
 *::before {
+  /*  basic reset of margin and padding */
   margin: 0;
   padding: 0;
+  /*  make box-sizing inherit the given value in the body */
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
+/*  1) set root font-size to 10px because 1rem is exactly 1 times the root font-size --> easier to calculate 
+    2) BUT even better is to set the root font-size to 100% and make it depending on the user's browser default setting
+    3) finally since we don't want 16px (default setting) but instead 10px we set it to 62.5% (10 / 16) */
 html {
   font-family: 'Be Vietnam', sans-serif;
   font-size: 100%;
@@ -37,8 +42,14 @@ html {
 }
 
 body {
+  /*  border-box will be inherited to all elements whithin in the body
+        --> see "box-sizing: inherit" in *{} */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  /* border-box means, that height and width will be defined for the entire box 
+       (including the padding and the border) and not just the content area.
+	    This also means that paddings and borders will reduce the inner width of the content area
+        instead of adding them to the total width of the element */
 }
 
 .navbar {
@@ -189,8 +200,7 @@ body {
   -webkit-box-shadow: 0 0.5rem 1rem #f1957e;
           box-shadow: 0 0.5rem 1rem #f1957e;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  /* transition: all .2s; */
 }
 
 .navbar__btn:hover {
@@ -332,8 +342,7 @@ body {
   -webkit-box-shadow: 0 0.5rem 1rem #f1957e;
           box-shadow: 0 0.5rem 1rem #f1957e;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  /* transition: all .2s; */
 }
 
 .header__content--btn:hover {
@@ -648,8 +657,7 @@ body {
   color: #f25f3a;
   font-weight: bold;
   font-size: 2rem;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
+  /* transition: 0.2s ease; */
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -752,8 +760,7 @@ body {
   background-color: #f1957e;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
+  /* transition: background-color 0.2s ease; */
 }
 
 @media only screen and (max-width: 800px) {
@@ -790,8 +797,7 @@ body {
   -webkit-box-shadow: 0 0.5rem 1rem #f1957e;
           box-shadow: 0 0.5rem 1rem #f1957e;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  /* transition: all .2s; */
   margin: 2rem 0;
 }
 
@@ -950,8 +956,7 @@ body {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  /* transition: all .2s; */
   z-index: 10;
 }
 
@@ -1212,8 +1217,7 @@ body {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  /* transition: all .2s; */
   z-index: 10;
   padding: .8rem 1.5rem .8rem 1.5rem;
   text-transform: uppercase;
