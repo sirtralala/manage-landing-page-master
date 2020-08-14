@@ -36,7 +36,7 @@ $margin-default-800px: 2vw;
     border-radius: 2rem;
     box-shadow: 0 .5rem 1rem $bright-red-hover;
     cursor: pointer;
-    /* transition: all .2s; */
+    transition: all .2s;
 
     &:hover {
         background-color: $bright-red-hover;
@@ -47,7 +47,7 @@ $margin-default-800px: 2vw;
     }
 
     &:active {
-        /* transform: scale(0.98); */
+        transform: scale(0.98);
         box-shadow: 0 .3rem .8rem $bright-red-hover;
     }
 }
@@ -62,7 +62,7 @@ $margin-default-800px: 2vw;
     border: none;
     border-radius: 2rem;
     cursor: pointer;
-    /* transition: all .2s; */
+    transition: all .2s;
     z-index: 10;
 
     &:hover {
@@ -74,7 +74,7 @@ $margin-default-800px: 2vw;
     }
 
     &:active {
-        /* transform: scale(0.98); */
+        transform: scale(0.98);
     }
 }
 

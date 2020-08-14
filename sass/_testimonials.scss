@@ -51,7 +51,7 @@
 
         &--pic {
             width: 12%;
-            /* transform: translateY(3rem); */
+            transform: translateY(3rem);
 
             @media only screen and (max-width: 800px) {
                 width: 18%;
@@ -59,7 +59,7 @@
 
             @media only screen and (max-width: 600px) {
                 width: 22%;
-                /* transform: translateY(3rem); */
+                transform: translateY(3rem);
             }
         }
 
@@ -87,7 +87,7 @@
             color: $bright-red;
             font-weight: bold;
             font-size: 2rem;
-            /* transition: 0.2s ease; */
+            transition: 0.2s ease;
             user-select: none;
             cursor: pointer;
 
@@ -162,13 +162,13 @@
             height: 1rem;
             width: 1rem;
             margin: 0 .3rem;
-            /* transform: translateY(-3.5rem); */
+            transform: translateY(-3.5rem);
             background-color: $bright-red-hover;
             border-radius: 50%;
             cursor: pointer;
-            /* transition: background-color 0.2s ease; */
+            transition: background-color 0.2s ease;
 
-            /* @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 800px) {
                 transform: translateY(-1.5rem);
             }
 
@@ -178,7 +178,7 @@
 
             @media only screen and (max-width: 300px) {
                 transform: translateY(1.5rem);
-            } */
+            }
 
             &:hover,
             &-active {
@@ -198,7 +198,7 @@
     }
 }
   
-/* .fade {
+.fade {
     animation-name: fade;
     animation-duration: 1.2s;
 }
@@ -212,4 +212,4 @@
         opacity: 1;
         transform: translateX(0);
     }
-} */
+}
