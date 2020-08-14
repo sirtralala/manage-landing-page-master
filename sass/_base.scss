@@ -47,7 +47,7 @@ $margin-default-800px: 2vw;
     }
 
     &:active {
-        transform: scale(0.98);
+        /* transform: scale(0.98); */
         box-shadow: 0 .3rem .8rem $bright-red-hover;
     }
 }
@@ -74,7 +74,7 @@ $margin-default-800px: 2vw;
     }
 
     &:active {
-        transform: scale(0.98);
+        /* transform: scale(0.98); */
     }
 }
 
