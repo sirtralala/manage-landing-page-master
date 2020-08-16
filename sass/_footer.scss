@@ -18,7 +18,7 @@
         height: 100%;
         left: 46vw; 
         background: url("/images/bg-simplify-section-desktop.svg") no-repeat space 2vw -1vw;
-        /* transform: rotate(180deg); */
+        transform: rotate(180deg);
 
         @media only screen and (max-width: 1000px) {
             display: none;
